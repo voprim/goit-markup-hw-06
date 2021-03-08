@@ -309,7 +309,6 @@ img {
 .tagline-section-order {
   display: inline-block;
   margin-top: 30px;
-  /* margin-bottom: 200px; */
   padding: 10px 32px;
 
   font-weight: bold;
@@ -321,7 +320,7 @@ img {
   letter-spacing: 0.06em;
   color: var(--text-white-color);
   background: var(--brand-color);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .advantages-section {
@@ -572,6 +571,7 @@ img {
 }
 
 .footer .container {
+  justify-content: space-between;
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -579,7 +579,7 @@ img {
 }
 
 .footer-contacts-wrapper {
-  margin-right: 70px;
+  /* margin-right: 80px; */
 }
 
 .footer ul {
@@ -680,6 +680,72 @@ img {
 .footer-social-link:focus {
   background-color: var(--link-hover-color);
   color: var(--text-white-color);
+}
+
+.footer-subscription-wrapper {
+  /* margin-left: 93px; */
+  /* justify-content: flex-end; */
+}
+
+.form-subscription {
+  display: flex;
+}
+
+.form-subscription input {
+}
+
+.form-input-email {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: var(--link-footer-color);
+  background-color: transparent;
+}
+
+.form-input-email:not(::placeholder) {
+  background-color: transparent;
+}
+
+.form-subscription-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  /* padding-left: 29px; */
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 187% */
+  letter-spacing: 0.06em;
+  /* text-align: left; */
+
+  color: var(--text-white-color);
+  background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid var(--brand-color);
+}
+
+.form-subscription-btn svg {
+  margin-left: 10px;
+  fill: currentColor;
 }
 
 /* ---PORTFOLIO.HTML--- */
