@@ -75,15 +75,39 @@
                 ></use>
               </svg>
             </button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-              quis debitis quibusdam doloremque perspiciatis distinctio
-              consequuntur nobis ipsa dolore earum quisquam qui eveniet maxime
-              ad, numquam libero quos, veritatis accusantium similique tempora
-              nemo? Quo consequuntur iusto eius aut facilis doloribus aliquam
-              quae vitae dolor voluptatibus? Accusamus corrupti cumque odio
-              illo.
-            </p>
+
+            <h2>Оставьте свои данные, мы вам перезвоним</h2>
+            <form name="form-order" class="form-order">
+              <label class="form-order-label">
+                Имя
+                <input type="text" name="name" class="form-order-input" />
+              </label>
+              <label class="form-order-label">
+                Телефон
+                <input
+                  type="tel"
+                  name="phone_number"
+                  class="form-order-input"
+                />
+              </label>
+              <label class="form-order-label">
+                Почта
+                <input type="email" name="email" class="form-order-input" />
+              </label>
+              <label class="form-order-label">
+                Комментарий
+                <textarea
+                  name="comments"
+                  placeholder="Введите текст"
+                  class="form-order-input"
+                ></textarea>
+              </label>
+              <label class="form-confirm">
+                <input type="checkbox" name="confirm" />
+                Соглашаюсь с рассылкой и принимаю
+                <a href="#">Условия договора</a>
+              </label>
+            </form>
           </div>
         </div>
       </section>
@@ -487,12 +511,14 @@
         <div class="footer-join footer-subscription-wrapper">
           <h3>Подпишитесь на рассылку</h3>
           <form name="subscription" class="form-subscription">
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              class="form-input-email"
-            />
+            <label>
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                class="form-input-email"
+              />
+            </label>
             <button type="button" class="form-subscription-btn">
               <span>Подписаться</span>
               <svg width="24" height="24">
