@@ -123,15 +123,19 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--background-white);
+
+  cursor: pointer;
 }
 
 .button-modal-close svg {
   fill: currentColor;
+
+  transition: color 250ms var(--func-cubic);
 }
 
-/* .form-order-wrapper {
-  padding: 40px;
-} */
+.button-modal-close svg:hover {
+  color: var(--link-hover-color);
+}
 
 .modal h2 {
   margin-bottom: 2px;
@@ -185,16 +189,24 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+
+  transition: border 250ms var(--func-cubic), fill 250ms var(--func-cubic);
 }
 
-.form-order-input:focus {
+.form-order-input:focus,
+.form-order-input:hover {
   border: 1px solid var(--brand-color);
   border-radius: 4px;
   outline: none;
+  cursor: pointer;
 }
 
-.form-order-input:focus + svg {
+.form-order-input + svg:focus,
+.form-order-input + svg:hover,
+.form-order-input:focus + svg,
+.form-order-input:hover + svg {
   fill: var(--brand-color);
+  cursor: pointer;
 }
 
 .form-order textarea {
@@ -208,12 +220,14 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.form-order button:hover {
+  cursor: pointer;
+}
+
 .form-confirm {
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  position: relative;
-  display: inline-block;
+  align-items: center;
 
   margin-top: 20px;
 
@@ -223,8 +237,32 @@ img {
   letter-spacing: 0.03em;
 }
 
-.form-confirm svg {
-  position: absolute;
+.form-confirm a {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+
+.other-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  background-image: url('../images/icons/uncheck.svg');
+
+  transition: background-image 250ms var(--func-cubic);
+}
+
+.visually-hidden:checked + .other-checkbox {
+  border-color: transparent;
+
+  background-image: url('../images/icons/check.svg');
+  /* background-size: contain; */
+  /* background-origin: border-box; */
+}
+
+.confirm-text {
+  margin-right: 4px;
 }
 
 /* CONTAINER */
@@ -407,7 +445,9 @@ img {
 .tagline-section-order {
   display: inline-block;
   margin-top: 30px;
-  padding: 10px 32px;
+  padding: 10px 28px;
+
+  width: 200px;
 
   font-weight: bold;
   font-size: 16px;

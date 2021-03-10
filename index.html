@@ -112,13 +112,15 @@
                 ></textarea>
               </label>
               <label class="form-confirm">
-                <input type="checkbox" name="confirm" />
-                <svg width="16" height="15">
-                  <use href="./images/icons/symbol-defs.svg#icon-uncheck"></use>
-                </svg>
-                Соглашаюсь с рассылкой и принимаю
+                <input type="checkbox" name="confirm" class="visually-hidden" />
+                <span class="other-checkbox"></span>
+                <span class="confirm-text">Соглашаюсь с рассылкой и принимаю</span>
                 <a href="#">Условия договора</a>
               </label>
+
+              <button type="submit" class="tagline-section-order">
+                Отправить
+              </button>
             </form>
           </div>
         </div>
@@ -531,7 +533,7 @@
                 class="form-input-email"
               />
             </label>
-            <button type="button" class="form-subscription-btn">
+            <button type="submit" class="form-subscription-btn">
               <span>Подписаться</span>
               <svg width="24" height="24">
                 <use href="./images/icons/symbol-defs.svg#icon-subscr"></use>
