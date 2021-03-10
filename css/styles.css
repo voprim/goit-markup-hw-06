@@ -155,6 +155,7 @@ img {
 }
 
 .form-order-label {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -168,14 +169,32 @@ img {
   letter-spacing: 0.01em;
 }
 
+.form-order-label svg {
+  position: absolute;
+  top: 28px;
+  left: 12px;
+}
+
 .form-order-input {
   margin-top: 4px;
+  padding-left: 42px;
 
   width: 448px;
   height: 40px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
+}
+
+.form-order-input:focus {
+  border: 1px solid var(--brand-color);
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-order-input:focus + svg {
+  fill: var(--brand-color);
 }
 
 .form-order textarea {
@@ -190,9 +209,11 @@ img {
 }
 
 .form-confirm {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  position: relative;
+  display: inline-block;
 
   margin-top: 20px;
 
@@ -200,6 +221,10 @@ img {
   line-height: 24px;
   /* identical to box height, or 171% */
   letter-spacing: 0.03em;
+}
+
+.form-confirm svg {
+  position: absolute;
 }
 
 /* CONTAINER */
